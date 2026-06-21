@@ -14,6 +14,8 @@ PDF → chunk → embed → vector store (FAISS / ChromaDB)
 
 User question → Gradio UI → FastAPI backend → retrieve chunks → LLM → answer
 
+![Architecture diagram](architecture.png)
+
 - **Indexing** (`ingest.py`): one-time pipeline that loads the PDF, splits it into chunks, embeds them, and persists them to disk.
 - **Serving** (`main.py`): FastAPI backend that loads the pre-built vector store and exposes a `/ask` endpoint.
 - **Frontend** (`app.py`): Gradio UI that calls the FastAPI backend over HTTP — mirrors a real production split between frontend and backend.
