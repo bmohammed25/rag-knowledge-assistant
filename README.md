@@ -78,7 +78,7 @@ Evaluated across 5 test questions using `phi3:mini` as an LLM judge for faithful
 
 ## Known limitations & future work
 
-- **VRAM constraint**: switched from `llama3.2` to `phi3:mini` after repeated CUDA crashes traced to a 4GB Quadro T1000 GPU running out of memory under sustained load.
+- **VRAM constraint**: switched from `llama3.2` to `phi3:mini` after repeated CUDA crashes traced running out of memory under sustained load.
 - **RAGAS dependency conflict**: the official RAGAS library (`0.4.3`) depends on an internal `langchain_community` module that has since been removed in current LangChain versions. Implemented a custom LLM-judge evaluator instead.
 - **Chunking strategy**: fixed-size chunking (1000 chars, 150 overlap) struggles with multi-chunk synthesis questions. Future work: semantic chunking or query decomposition.
 - **FAISS vs ChromaDB**: at this dataset's scale (48 chunks), both produced identical retrieval rankings. ChromaDB was kept for its automatic disk persistence.
