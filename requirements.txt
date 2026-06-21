@@ -1,0 +1,16 @@
+langchain
+langchain-community
+langchain-openai
+langchain-text-splitters
+chromadb
+faiss-cpu
+sentence-transformers
+pypdf
+python-dotenv
+langchain-huggingface
+langchain-ollama
+fastapi
+uvicorn
+gradio
+ragas
+datasets
